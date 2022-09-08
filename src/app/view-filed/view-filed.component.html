@@ -1,0 +1,13 @@
+<div>
+  <div *ngIf="!grievancesLoaded">
+    <div class="main-item" *ngFor="let n of numSequence(4)">
+      <div class="static-background">
+        <div class="background-masker"></div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="grievancesLoaded">
+
+    <grievance-card [grievance]="grievance" *ngFor="let grievance of allGrievance"></grievance-card>
+  </div>
+</div>

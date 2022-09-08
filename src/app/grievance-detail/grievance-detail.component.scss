@@ -1,0 +1,87 @@
+.go-back {
+  margin-top: -25px;
+  margin-bottom: 25px;
+  margin-left: -4px;
+  img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.issue-id {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dbe1e8;
+  .id-title {
+    font-size: 12px;
+    color: #2a333e;
+  }
+  .id-style {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+  }
+}
+.detail {
+  border-bottom: 1px solid #dbe1e8;
+  .issue {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    .issue-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: #4b5c72;
+    }
+    .issue-title-body {
+      font-size: 13px;
+      color: #393c40;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.smallLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4b5c72;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.commentSection {
+  border-top: 1px solid #dbe1e8;
+  padding: 20px 0;
+  max-width: 550px;
+  .commentDetails {
+    margin-bottom: 16px;
+    max-width: 500px;
+    .oval {
+      border-radius: 50%;
+      align-items: center;
+      width: 35px;
+      margin-right: 5px;
+    }
+    .name-style {
+      color: blue;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .email-style {
+      font-size: 12px;
+    }
+    .date {
+      color: #4b5c72;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+    .message-box {
+      background: #f7f8fa;
+      border-radius: 2px;
+      padding: 10px;
+      color: #4b5c72;
+      margin-left: 38px;
+      font-size: 13px;
+    }
+  }
+}
+

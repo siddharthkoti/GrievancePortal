@@ -1,0 +1,80 @@
+<div class="go-back">
+  <img routerLink="/view-filed-grievance" src="/assets/back.png" />
+</div>
+<div class="issue-id">
+  <div class="id-title">Issue ID</div>
+
+  <div class="id-style">{{ grievanceId }}</div>
+</div>
+
+<div class="detail">
+  <div class="issue">
+    <div class="issue-title">Title</div>
+    <div *ngIf="!detailLoaded" class="static-background">
+      <div class="background-masker"></div>
+    </div>
+    <div *ngIf="detailLoaded" class="issue-title-body">
+      {{ grievDetail.title }}
+    </div>
+  </div>
+
+  <div class="issue">
+    <div class="issue-title">Description</div>
+    <div *ngIf="!detailLoaded" class="static-background">
+      <div class="background-masker"></div>
+    </div>
+    <div *ngIf="detailLoaded" class="issue-title-body">
+      {{ grievDetail.body }}
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="smallLabel mb-20">Comments History</div>
+
+  <div *ngIf="!commentsLoaded">
+    <div class="main-item" *ngFor="let n of numSequence(4)">
+      <div class="static-background">
+        <div class="background-masker"></div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="commentsLoaded">
+    <div class="commentSection" *ngFor="let comment of grievComments">
+      <div>
+        <div class="commentDetails">
+          <div class="d-flex align-items-center mb-2">
+            <div>
+              <div>
+                <img
+                  class="oval"
+                  src="https://ui-avatars.com/api/?name={{ comment.name }}"
+                />
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-between flex-grow-1"
+            >
+              <div class="text-reset">
+                <div class="name-style">{{ comment.name }}</div>
+                <div class="email-style">{{ comment.email }}</div>
+              </div>
+              <span class="date caption base-2"> 07 Sep 2022, 11:36 am </span>
+            </div>
+          </div>
+          <div class="message-box smaller-header-regular">
+            <div>
+              <p>
+                {{ comment.body }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="go-back">
+    <img routerLink="/view-filed-grievance" src="/assets/back.png" />
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<form class="grievance-form" [formGroup]="grievanceForm" (ngSubmit)='onSubmit()'>
+  <div class="form-group mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
+    <input formControlName="name" type="email" class="form-control" id="exampleInputName" aria-describedby="name">
+    <span *ngIf="!name.valid && (name.touched || submitted)" class="error-block">
+      Please provide Name
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail" class="form-label">Email address</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+    <span *ngIf="!email.valid && (email.touched || submitted)" class="error-block">
+      <span *ngIf="email.hasError('required')">
+          Please provide email id
+      </span>
+      <span *ngIf="email.hasError('email')">
+        Please provide valid email id
+      </span>
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputMobile" class="form-label">Mobile</label>
+    <input onlyNumber formControlName="mobile" type="email" class="form-control" id="exampleInputMobile" aria-describedby="mobile">
+    <span *ngIf="!mobile.valid && (mobile.touched || submitted)" class="error-block">
+      <span *ngIf="mobile.hasError('required')">
+          Please provide mobile Number
+      </span>
+      <span *ngIf="mobile.hasError('maxlength') || mobile.hasError('minlength')">
+        Mobile Number should be 10 digits
+      </span>
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlText" class="form-label">Expalin Your Grievance</label>
+    <textarea formControlName="text" class="form-control" id="exampleFormControlText" rows="3"></textarea>
+    <span *ngIf="!text.valid && (text.touched || submitted)" class="error-block">
+      Please give details about your Grievance
+    </span>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary" (click)="onReset()">Cancel</button>
+  </div>
+</form>
+
+<p>Form Status: {{ grievanceForm.status }}</p>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.static-background {
+  background-color: #f6f7f8;
+  background-size: 800px 104px;
+  height: 100%;
+  min-height: 30px;
+  position: relative;
+  .background-masker {
+    background-color: #fff;
+    position: absolute;
+  }
+}
+
+.main-item {
+  background-color: #fff;
+  width: 550px;
+  height: 100px;
+  margin-bottom: 20px;
+}

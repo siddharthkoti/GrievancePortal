@@ -1,0 +1,15 @@
+.grievance-form {
+  width: 400px;
+
+  .ng-invalid.ng-touched {
+    border-color: red;
+  }
+
+  .error-block {
+    color: red;
+  }
+
+  .btn {
+    margin-right: 5px;
+  }
+}
